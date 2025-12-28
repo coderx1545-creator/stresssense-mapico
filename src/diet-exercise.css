@@ -1,0 +1,107 @@
+.diet-exercise-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    box-shadow: #f093fb 0px 3px 8px;
+    border-radius: 9px;
+}
+
+.diet-exercise-container h1 {
+    text-align: center;
+    color: #333;
+    box-shadow: #f093fb 0px 3px 8px;
+    margin-bottom: 30px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-section textarea {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    color: #e0dddd;
+    border: 1px solid #df5caf;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.buttons-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.generate-btn {
+    padding: 10px 20px;
+    background-color: #0cf51f;
+    color: rgba(255, 255, 255, 0.978);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.generate-btn:hover {
+    background-color: #45a049;
+}
+
+.plans-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.plan-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 20px;
+    font-family: monospace;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.plan-card pre {
+    white-space: pre-wrap;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+.plan-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 25px;
+    margin-left: 15px;
+    height: auto;
+}
+
+.prev {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+pre {
+    font-size: 20px;
+}

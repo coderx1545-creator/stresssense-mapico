@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    border: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto Slab", sans-serif;
+    background: linear-gradient(to right, #1E2761, #408EC6, #7A2048) no-repeat center center fixed;
+    color: #f2eded;
+    font-weight: 250;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'BBH Bartle', cursive;
+    margin: 0;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.para {
+    font-size: 26px;
+    line-height: 2.6;
+    margin: 20px 0;
+}
+
+.Heading {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button:hover {
+    background-color: #45a049;
+    box-shadow: #1E2761 0px 8px 16px 0px;
+    font-size: 20px;
+}
+
+.typing-h1 {
+    display: inline-block;
+    font-family: 'BBH Bartle', cursive;
+    font-size: 56px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+
+    /* cursor */
+    /*border-right: 4px solid #f2eded;
+    padding-right: 10px;*/
+
+    /* animation */
+    animation:
+        h1Typing 5s steps(24, end) forwards,
+        h1Blink 0.8s step-end;
+}
+
+.para {
+    box-shadow: #1E2761 0px 8px 16px 0px;
+}
+
+/* typing animation */
+@keyframes h1Typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 12ch;
+    }
+}
+
+/* cursor blink */
+@keyframes h1Blink {
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
