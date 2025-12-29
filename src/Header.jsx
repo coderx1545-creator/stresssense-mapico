@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import logo from "./assets/logo.webp";
 import "./header.css";
 
@@ -7,6 +7,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         const checkAuth = () => {
@@ -48,9 +49,9 @@ const Header = () => {
                         <NavLink to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</NavLink>
                         {isAuthenticated ? (
                             <>
-                                <NavLink to="/stress" className="nav-link" onClick={() => setIsMenuOpen(false)}>Stress Check</NavLink>
-                                <NavLink to="/ai-assistant" className="nav-link" onClick={() => setIsMenuOpen(false)}>AI Assistant</NavLink>
-                                <NavLink to="/diet-exercise" className="nav-link" onClick={() => setIsMenuOpen(false)}>Diet & Exercise</NavLink>
+                                {location.pathname !== '/stress' && <NavLink to="/stress" className="nav-link" onClick={() => setIsMenuOpen(false)}>Stress Check</NavLink>}
+                                {location.pathname !== '/ai-assistant' && <NavLink to="/ai-assistant" className="nav-link" onClick={() => setIsMenuOpen(false)}>AI Assistant</NavLink>}
+                                {location.pathname !== '/diet-exercise' && <NavLink to="/diet-exercise" className="nav-link" onClick={() => setIsMenuOpen(false)}>Diet & Exercise</NavLink>}
                                 <button className="logout-btn" onClick={handleLogout}>Logout</button>
                             </>
                         ) : (
