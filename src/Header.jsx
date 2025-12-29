@@ -46,12 +46,12 @@ const Header = () => {
 
                     <div className="nav-links">
                         <NavLink to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</NavLink>
-                        <NavLink to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</NavLink>
                         {isAuthenticated ? (
                             <>
                                 {location.pathname !== '/stress' && <NavLink to="/stress" className="nav-link" onClick={() => setIsMenuOpen(false)}>Stress Check</NavLink>}
                                 {location.pathname !== '/ai-assistant' && <NavLink to="/ai-assistant" className="nav-link" onClick={() => setIsMenuOpen(false)}>AI Assistant</NavLink>}
                                 {location.pathname !== '/diet-exercise' && <NavLink to="/diet-exercise" className="nav-link" onClick={() => setIsMenuOpen(false)}>Diet & Exercise</NavLink>}
+                                {location.pathname !== '/about' && <NavLink to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</NavLink>}
                                 <button className="logout-btn" onClick={handleLogout}>Logout</button>
                             </>
                         ) : (
